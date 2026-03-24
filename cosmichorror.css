@@ -1,0 +1,248 @@
+/* =========================================================
+   COSMIC HORROR BACKGROUND CSS — WOLVDEN
+   Dark void, eldritch glow, mist, texture
+   ========================================================= */
+
+/* ---------- Base page background ---------- */
+body,
+html {
+  background:
+    radial-gradient(circle at 50% 20%, rgba(74, 108, 120, 0.10) 0%, rgba(10, 14, 19, 0) 18%),
+    radial-gradient(circle at 80% 30%, rgba(112, 145, 141, 0.06) 0%, rgba(0, 0, 0, 0) 16%),
+    radial-gradient(circle at 20% 70%, rgba(88, 109, 124, 0.08) 0%, rgba(0, 0, 0, 0) 18%),
+    linear-gradient(180deg, #06070a 0%, #0a0d12 28%, #0d1016 60%, #050609 100%) !important;
+  background-attachment: fixed !important;
+  color: #cdd4db !important;
+}
+
+/* ---------- Main page wrappers ---------- */
+#main,
+.container,
+div#content,
+.content,
+.boxcontainer,
+.table,
+.panel,
+.card,
+.feature,
+.breadcrumb,
+.navbar,
+.alert,
+.left,
+.right {
+  background-color: rgba(10, 13, 18, 0.82) !important;
+  border-color: rgba(104, 130, 145, 0.22) !important;
+  box-shadow:
+    0 0 0 1px rgba(115, 145, 160, 0.06),
+    0 0 18px rgba(37, 52, 63, 0.18) !important;
+  color: #d2d8df !important;
+}
+
+/* ---------- Add subtle eldritch fog overlay ---------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(95, 141, 140, 0.05) 0%, transparent 22%),
+    radial-gradient(circle at 75% 35%, rgba(90, 110, 137, 0.06) 0%, transparent 24%),
+    radial-gradient(circle at 45% 80%, rgba(83, 116, 122, 0.05) 0%, transparent 26%);
+  mix-blend-mode: screen;
+}
+
+/* ---------- Grain / organic texture ---------- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.10;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.025) 0px,
+      rgba(255,255,255,0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.018) 0px,
+      rgba(255,255,255,0.018) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+}
+
+/* ---------- Make sure actual site content sits above overlays ---------- */
+#header,
+#main,
+#footer,
+.navbar,
+.container,
+div#content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Headers / title bars ---------- */
+h1, h2, h3, h4, h5, h6,
+.panel-heading,
+.box-header,
+.table-header,
+.navbar,
+.breadcrumb {
+  color: #d7e2ea !important;
+  text-shadow: 0 0 10px rgba(130, 165, 173, 0.18);
+}
+
+/* ---------- Links ---------- */
+a,
+a:link,
+a:visited {
+  color: #9ebfca !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: #cfe6ec !important;
+  text-shadow: 0 0 8px rgba(144, 189, 194, 0.30);
+}
+
+/* ---------- Top navigation ---------- */
+.navbar,
+#header .navbar,
+.navbar-default,
+.navbar-inverse {
+  background: linear-gradient(180deg, rgba(8, 11, 15, 0.96), rgba(15, 20, 27, 0.94)) !important;
+  border-bottom: 1px solid rgba(110, 136, 148, 0.18) !important;
+}
+
+.navbar a,
+.navbar-brand,
+.nav-link {
+  color: #cad5dc !important;
+}
+
+.navbar a:hover,
+.navbar-brand:hover,
+.nav-link:hover {
+  background-color: rgba(95, 125, 136, 0.08) !important;
+  color: #eef7fb !important;
+}
+
+/* ---------- Tables ---------- */
+table,
+.table,
+.table-striped,
+.table-bordered {
+  background: rgba(9, 12, 17, 0.78) !important;
+  color: #d5dce2 !important;
+  border-color: rgba(106, 129, 140, 0.18) !important;
+}
+
+.table th,
+.table thead th,
+.table tr th {
+  background: linear-gradient(180deg, rgba(20, 28, 36, 0.95), rgba(12, 17, 22, 0.95)) !important;
+  color: #dce7ef !important;
+  border-color: rgba(116, 143, 156, 0.18) !important;
+}
+
+.table td,
+.table tr td {
+  background-color: rgba(11, 15, 21, 0.70) !important;
+  border-color: rgba(103, 125, 137, 0.14) !important;
+}
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: rgba(17, 22, 29, 0.72) !important;
+}
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th,
+.table tr:hover td {
+  background-color: rgba(34, 47, 58, 0.52) !important;
+}
+
+/* ---------- Inputs / textareas / selects ---------- */
+input,
+textarea,
+select,
+.form-control {
+  background: rgba(8, 11, 15, 0.92) !important;
+  color: #d6dde3 !important;
+  border: 1px solid rgba(110, 137, 149, 0.24) !important;
+  box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.form-control:focus {
+  border-color: rgba(145, 182, 191, 0.42) !important;
+  box-shadow: 0 0 12px rgba(90, 129, 137, 0.20) !important;
+  outline: none !important;
+}
+
+/* ---------- Buttons ---------- */
+button,
+.btn,
+input[type="submit"],
+input[type="button"] {
+  background: linear-gradient(180deg, #1a232c 0%, #11171e 100%) !important;
+  color: #dce5ea !important;
+  border: 1px solid rgba(120, 147, 159, 0.22) !important;
+  box-shadow: 0 0 10px rgba(63, 87, 97, 0.14) !important;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: linear-gradient(180deg, #24313b 0%, #151d24 100%) !important;
+  color: #f1f8fb !important;
+  border-color: rgba(150, 189, 196, 0.30) !important;
+  box-shadow: 0 0 14px rgba(95, 141, 147, 0.20) !important;
+}
+
+/* ---------- Alerts / notices ---------- */
+.alert,
+.notice,
+.warning,
+.success,
+.error {
+  background: rgba(13, 17, 22, 0.88) !important;
+  color: #d9e3ea !important;
+  border: 1px solid rgba(114, 141, 153, 0.20) !important;
+}
+
+/* ---------- Sidebar / den-like boxes ---------- */
+.sidebar,
+.left .panel,
+.right .panel,
+.widget,
+.box {
+  background: rgba(10, 13, 18, 0.84) !important;
+  border: 1px solid rgba(105, 130, 143, 0.18) !important;
+}
+
+/* ---------- Images sit nicely against dark bg ---------- */
+img {
+  border-radius: 4px;
+}
+
+/* ---------- Optional subtle horror glow on hovered panels ---------- */
+.panel:hover,
+.box:hover,
+.table:hover,
+.container:hover {
+  box-shadow:
+    0 0 0 1px rgba(121, 152, 165, 0.08),
+    0 0 24px rgba(58, 82, 92, 0.20) !important;
+}
